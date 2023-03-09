@@ -5,10 +5,7 @@
     <title>Crea</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <!-- <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -33,6 +30,21 @@
                     aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <a href="#">Learn more!</a>
             </div>
+            <!-- Swiper -->
+            <div class="imgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/cocacola1.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="images/cocacola2.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="images/cocacola3.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="images/cocacola4.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="images/cocacola5.png" alt="" /></div>
+                        <div class="swiper-slide"><img src="images/cocacola6.png" alt="" /></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+
         </div>
         <ul class="sci">
             <li>
@@ -48,7 +60,28 @@
         </ul>
     </section>
     <!--Main content -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+    </script>
 </body>
 
 </html>
